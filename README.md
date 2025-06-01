@@ -22,24 +22,90 @@ pip install pyfilterlab
 from pyfilterlab import design_fir, apply_filter, plot_response, plot_signal
 ```
 
-## 📘 Use Reference
+## Ouput:-
 
-| Function | Description | Parameters | Returns |
-|----------|-------------|------------|---------|
-| `design_fir(num_taps, cutoff, fs, window='hamming')` | Designs a FIR low-pass filter using the window method. | - `num_taps` (int): Number of filter coefficients  
-- `cutoff` (float): Cutoff frequency in Hz  
-- `fs` (float): Sampling frequency in Hz  
-- `window` (str): Type of window (e.g., 'hamming', 'hann', 'blackman') | `numpy.ndarray`: FIR filter coefficients |
-| `design_iir(order, cutoff, fs, ftype='butter')` | Designs an IIR low-pass filter. | - `order` (int): Filter order  
-- `cutoff` (float): Cutoff frequency in Hz  
-- `fs` (float): Sampling frequency in Hz  
-- `ftype` (str): Type of IIR filter ('butter', 'cheby1', 'cheby2', 'ellip') | Tuple (`b`, `a`): Numerator and denominator coefficients |
-| `apply_filter(b, a, signal)` | Applies a filter to a signal using the filter coefficients. | - `b` (array): Numerator coefficients  
-- `a` (array or 1): Denominator coefficients  
-- `signal` (array): Input signal | `numpy.ndarray`: Filtered signal |
-| `plot_response(b, a=1, fs=1.0, title='Frequency Response')` | Plots the frequency response (gain vs frequency) of the filter. | - `b`, `a`: Filter coefficients  
-- `fs`: Sampling frequency  
-- `title`: Plot title | Displays a Matplotlib plot |
-| `plot_signal(signal, fs=1.0, title='Signal')` | Plots a time-domain signal. | - `signal`: Signal data  
-- `fs`: Sampling frequency  
-- `title`: Plot title | Displays a Matplotlib plot |
+<img src="https://i.postimg.cc/Kjc0J5Bs/temp-Imageqs2b-Et.avif">
+
+<br>
+<img src="https://i.postimg.cc/4yTQSQtT/temp-Imagej-Kbb-Kw.avif">
+
+<br>
+
+<img src="https://i.postimg.cc/zf7NBxzx/temp-Imageyu2-J1-Z.avif">
+---
+<h2>📘 Use Reference</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Function</th>
+      <th>Description</th>
+      <th>Parameters</th>
+      <th>Returns</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code>design_fir(num_taps, cutoff, fs, window='hamming')</code></td>
+      <td>Designs a FIR low-pass filter using the window method.</td>
+      <td>
+        <ul>
+          <li><code>num_taps</code> (int): Number of filter coefficients</li>
+          <li><code>cutoff</code> (float): Cutoff frequency in Hz</li>
+          <li><code>fs</code> (float): Sampling frequency in Hz</li>
+          <li><code>window</code> (str): Type of window (e.g., 'hamming', 'hann', 'blackman')</li>
+        </ul>
+      </td>
+      <td><code>numpy.ndarray</code>: FIR filter coefficients</td>
+    </tr>
+    <tr>
+      <td><code>design_iir(order, cutoff, fs, ftype='butter')</code></td>
+      <td>Designs an IIR low-pass filter.</td>
+      <td>
+        <ul>
+          <li><code>order</code> (int): Filter order</li>
+          <li><code>cutoff</code> (float): Cutoff frequency in Hz</li>
+          <li><code>fs</code> (float): Sampling frequency in Hz</li>
+          <li><code>ftype</code> (str): IIR type ('butter', 'cheby1', 'cheby2', 'ellip')</li>
+        </ul>
+      </td>
+      <td>Tuple <code>(b, a)</code>: Numerator and denominator coefficients</td>
+    </tr>
+    <tr>
+      <td><code>apply_filter(b, a, signal)</code></td>
+      <td>Applies a filter to a signal using the filter coefficients.</td>
+      <td>
+        <ul>
+          <li><code>b</code> (array): Numerator coefficients</li>
+          <li><code>a</code> (array or 1): Denominator coefficients</li>
+          <li><code>signal</code> (array): Input signal</li>
+        </ul>
+      </td>
+      <td><code>numpy.ndarray</code>: Filtered signal</td>
+    </tr>
+    <tr>
+      <td><code>plot_response(b, a=1, fs=1.0, title='Frequency Response')</code></td>
+      <td>Plots the frequency response (gain vs frequency) of the filter.</td>
+      <td>
+        <ul>
+          <li><code>b</code>, <code>a</code>: Filter coefficients</li>
+          <li><code>fs</code>: Sampling frequency</li>
+          <li><code>title</code>: Plot title</li>
+        </ul>
+      </td>
+      <td>Displays a Matplotlib plot</td>
+    </tr>
+    <tr>
+      <td><code>plot_signal(signal, fs=1.0, title='Signal')</code></td>
+      <td>Plots a time-domain signal.</td>
+      <td>
+        <ul>
+          <li><code>signal</code>: Signal data</li>
+          <li><code>fs</code>: Sampling frequency</li>
+          <li><code>title</code>: Plot title</li>
+        </ul>
+      </td>
+      <td>Displays a Matplotlib plot</td>
+    </tr>
+  </tbody>
+</table>
