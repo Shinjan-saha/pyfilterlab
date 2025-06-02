@@ -2,8 +2,10 @@ from setuptools import setup, find_packages
 
 setup(
     name='pyfilterlab',
-    version='0.1.0',
+    version='0.1.1',
     description='Digital filter design and visualization toolkit',
+    long_description=open("README.md").read(),
+    long_description_content_type="text/markdown",
     author='Shinjan Saha',
     author_email='shinjansaha02@gmail.com',
     packages=find_packages(),
